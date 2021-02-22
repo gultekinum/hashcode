@@ -1,4 +1,5 @@
 import math
+import sys
 class Ride(object):
     def __init__(self, startR , startC,finishR,finishC, earliestStart,latestFinish):
         self.startR = startR
@@ -126,6 +127,17 @@ class JudgeSystem(object):
             manager = Manager(T)
             manager.start()
             self.score = table.getScore()
+file_dict = {
+1:["a_example.in","a_submission.in"],
+2:["b_should_be_easy.in","b_submission.in"],
+3:["c_no_hurry.in","c_submission.in"],
+4:["d_metropolis.in","d_submission.in"],
+5:["e_high_bonus.in","e_submission.in"]
+}
 
-j = JudgeSystem("a_example.in", "a_submission.in")
-print("Score: ", j.score)
+file_choice = int(sys.argv[1])
+
+j = JudgeSystem(file_dict[file_choice][0], file_dict[file_choice][1])
+result = file_dict[file_choice][0]+" Score: "+str(j.score)+"\n"
+f=open("result.in","a")
+f.write(result)
