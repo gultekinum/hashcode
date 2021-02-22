@@ -47,10 +47,13 @@ car_count = int(info[2])
 step_count = int(info[5])
 
 drives = sorted(drives, key=lambda x: x.es, reverse=False)
-for items in drives:
-    print (items.source,items.destination,items.es,items.lf,items.distance)
-# cars = []
-# for i in range(car_count):
-#     cars.append(Car())
+# for items in drives:
+#     print (items.source,items.destination,items.es,items.lf,items.distance)
+
+cars = []
+for i in range(car_count):
+    cars.append(Car())
+
+
 
 
