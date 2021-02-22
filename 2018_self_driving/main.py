@@ -37,7 +37,7 @@ def read_data(fname):
         drives.append(Drive(x.strip().split(),count))
         count+=1
     return info,drives
-print("helloo")
+
 file_choice = int(sys.argv[1])
 
 res = read_data(file_dict[file_choice][0])
